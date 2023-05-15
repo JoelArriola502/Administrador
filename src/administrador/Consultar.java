@@ -31,21 +31,18 @@ Statement MostrarDatos=null;
         Modelo.addColumn("Nombre");
         Modelo.addColumn("Apellido");
         Modelo.addColumn("DPI");
-        Modelo.addColumn("idPago");
         Modelo.addColumn("Pago");
-        Modelo.addColumn("Menbresia");
-        Modelo.addColumn("idTipoPago");
-        Modelo.addColumn("IdIngresos");
-        Modelo.addColumn("idClientes");
-        Modelo.addColumn("idPago");
-        Modelo.addColumn("FechaIngreso");
-        Modelo.addColumn("idTipoPago");
         Modelo.addColumn("TipoPago");
+        Modelo.addColumn("Menbresia");
+        Modelo.addColumn("FechaIngreso");
+     
+        
       
         jTableDatos.setModel(Modelo);
-        String Mostrar="select *from Clientes c, Pago p, Ingresos i, TipoPago tp\n" +
+        String Mostrar="select c.idClientes, c.Nombre , c.Apellido, c.DPI, p.Pago,tp.TipoPago,p.Membresia,i.FechaIngreso\n" +
+"from Clientes c, Pago p, Ingresos i, TipoPago tp\n" +
 "where c.idClientes=i.idClientes and i.idPago=p.idPago and p.idTipoPago=tp.idTipoPago";
-        String Datos[]=new String[14];
+        String Datos[]=new String[8];
         Statement st;
         try {
             st=ConectarBD.createStatement();
@@ -59,12 +56,6 @@ Statement MostrarDatos=null;
                 Datos[5]=rs.getString(6);
                 Datos[6]=rs.getString(7);
                 Datos[7]=rs.getString(8);
-                Datos[8]=rs.getString(9);
-                Datos[9]=rs.getString(10);
-                Datos[10]=rs.getString(11);
-                Datos[11]=rs.getString(12);
-                Datos[12]=rs.getString(13);
-                Datos[13]=rs.getString(14);
                 Modelo.addRow(Datos);
                
             }

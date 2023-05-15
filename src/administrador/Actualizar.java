@@ -19,12 +19,14 @@ public class Actualizar extends javax.swing.JPanel {
 Conexion conectar=new Conexion();
 Connection ConectarBD=conectar.getConection();
 PreparedStatement actualizar=null;
+PreparedStatement Eliminar=null;
 
 /**
      * Creates new form Actualizar
      */
     public Actualizar() {
         initComponents();
+      
     }
    
      public void MostrarDatos(){
@@ -125,7 +127,17 @@ PreparedStatement actualizar=null;
              JOptionPane.showMessageDialog(null, "ERROR AL ACTUALIZAR "+e.toString());
          }
      }
-
+public void Limpiar(){
+    txtNombre.setText("");
+    txtApellido.setText("");
+    txtDPI.setText("");
+   jComboBox1.setSelectedIndex(0);
+   txtPago.setText("");
+   jComboBox2.setSelectedIndex(0);
+   txtFecha.setText("");
+   txtID.setText("");
+   
+}
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -426,15 +438,19 @@ PreparedStatement actualizar=null;
         Pago();
         Ingresos();
       
+      
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButtonMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMostrarActionPerformed
         // TODO add your handling code here:
         MostrarDatos();
+        
     }//GEN-LAST:event_jButtonMostrarActionPerformed
 
     private void jTableDatosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableDatosMouseClicked
         // TODO add your handling code here:
+        jButton1.setEnabled(true);
+        jButtonMostrar.setEnabled(false);
         int fila=this.jTableDatos.getSelectedRow();
         this.txtID.setText(this.jTableDatos.getValueAt(fila, 0).toString());
         this.txtNombre.setText(this.jTableDatos.getValueAt( fila,1).toString());

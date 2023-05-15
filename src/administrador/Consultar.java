@@ -9,7 +9,7 @@ import javax.swing.table.DefaultTableModel;
 import java.sql.Statement;
 import java.sql.Connection;
 import javax.swing.JOptionPane;
-
+import java.sql.PreparedStatement;
 /**
  *
  * @author Joel Arriola

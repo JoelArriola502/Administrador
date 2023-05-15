@@ -29,8 +29,7 @@ PreparedStatement Insertar=null;
         initComponents();
 
          
-     
-      
+    
     }
     void Cliente(){
         
@@ -42,6 +41,7 @@ PreparedStatement Insertar=null;
             Insertar.setString(3, txtDPI.getText());
             Insertar.executeUpdate();
             JOptionPane.showMessageDialog(null, "Datos Agregados Correctamente ");
+           // Limpiar();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Datos no  Agregados Correctamente "+e.toString());
         }
@@ -54,6 +54,7 @@ PreparedStatement Insertar=null;
             Insertar.setString(1,TipoPago);
             Insertar.executeUpdate();
             JOptionPane.showMessageDialog(null, "Datos Agregados Correctamente ");
+           // Limpiar();
         } catch (Exception e) {
               JOptionPane.showMessageDialog(null, "Datos no  Agregados Correctamente "+e.toString());
         }
@@ -72,6 +73,7 @@ PreparedStatement Insertar=null;
             Insertar.setString(3, txtID.getText());
             Insertar.executeUpdate();
             JOptionPane.showMessageDialog(null, "Datos agregados Correctamente a Pago");
+           // Limpiar();
         } catch (Exception e) {
                JOptionPane.showMessageDialog(null, "Datos no  Agregados Correctamente "+e.toString());
         }
@@ -88,6 +90,7 @@ PreparedStatement Insertar=null;
             Insertar.setString(3, txtFecha.getText());
             Insertar.executeUpdate();
             JOptionPane.showMessageDialog(null, "Datos Agregados Correctamente a Ingresos");
+           // Limpiar();
         } catch (Exception e) {
              JOptionPane.showMessageDialog(null, "Datos no  Agregados Correctamente "+e.toString());
         }
@@ -101,7 +104,17 @@ PreparedStatement Insertar=null;
     label.setIcon(icon);
     this.repaint();
 }
-
+public void Limpiar(){
+    txtNombre.setText("");
+    txtApellido.setText("");
+    txtDPI.setText("");
+   jComboBox1.setSelectedIndex(0);
+   txtPago.setText("");
+   jComboBox2.setSelectedIndex(0);
+   txtFecha.setText("");
+   txtID.setText("");
+   
+}
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

@@ -130,12 +130,11 @@ PreparedStatement Insertar=null;
         jSeparator8 = new javax.swing.JSeparator();
         txtID = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(51, 255, 153));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(87, 222, 192));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtNombre.setBackground(new java.awt.Color(87, 222, 192));
@@ -149,9 +148,9 @@ PreparedStatement Insertar=null;
                 txtNombreActionPerformed(evt);
             }
         });
-        jPanel1.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 140, 310, 30));
-        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 173, 310, 10));
-        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, 310, 10));
+        jPanel1.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 130, 310, 30));
+        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 160, 310, 10));
+        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 210, 310, 10));
 
         txtApellido.setBackground(new java.awt.Color(87, 222, 192));
         txtApellido.setForeground(new java.awt.Color(153, 153, 153));
@@ -164,7 +163,7 @@ PreparedStatement Insertar=null;
                 txtApellidoActionPerformed(evt);
             }
         });
-        jPanel1.add(txtApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 190, 310, 30));
+        jPanel1.add(txtApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 180, 310, 30));
 
         txtDPI.setBackground(new java.awt.Color(87, 222, 192));
         txtDPI.setForeground(new java.awt.Color(153, 153, 153));
@@ -177,9 +176,9 @@ PreparedStatement Insertar=null;
                 txtDPIActionPerformed(evt);
             }
         });
-        jPanel1.add(txtDPI, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 230, 310, 30));
-        jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 260, 310, 10));
-        jPanel1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, 310, 10));
+        jPanel1.add(txtDPI, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 220, 310, 30));
+        jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 250, 310, 10));
+        jPanel1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 330, 310, 10));
 
         txtPago.setBackground(new java.awt.Color(87, 222, 192));
         txtPago.setForeground(new java.awt.Color(153, 153, 153));
@@ -192,18 +191,18 @@ PreparedStatement Insertar=null;
                 txtPagoActionPerformed(evt);
             }
         });
-        jPanel1.add(txtPago, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 310, 310, 30));
-        jPanel1.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 380, 310, 10));
+        jPanel1.add(txtPago, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 300, 310, 30));
+        jPanel1.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 370, 310, 10));
 
         jComboBox1.setBackground(new java.awt.Color(87, 222, 192));
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tipo Pago", "Efectivo", "Targeta Credito", " " }));
         jComboBox1.setBorder(null);
-        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 270, 310, 30));
+        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 260, 310, 30));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("INGRESE SUS DATOS ");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 250, 40));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 70, 250, 40));
 
         txtFecha.setBackground(new java.awt.Color(87, 222, 192));
         txtFecha.setForeground(new java.awt.Color(153, 153, 153));
@@ -216,15 +215,15 @@ PreparedStatement Insertar=null;
                 txtFechaActionPerformed(evt);
             }
         });
-        jPanel1.add(txtFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 390, 310, 30));
-        jPanel1.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 420, 310, 10));
-        jPanel1.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 300, 310, 10));
+        jPanel1.add(txtFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 380, 310, 30));
+        jPanel1.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 410, 310, 10));
+        jPanel1.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 290, 310, 10));
 
         jComboBox2.setBackground(new java.awt.Color(87, 222, 192));
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Menbresía", "PREMIUN", "VIP", " " }));
         jComboBox2.setBorder(null);
-        jPanel1.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 350, 310, 30));
-        jPanel1.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 460, 310, 10));
+        jPanel1.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 340, 310, 30));
+        jPanel1.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 450, 310, 10));
 
         txtID.setBackground(new java.awt.Color(87, 222, 192));
         txtID.setForeground(new java.awt.Color(153, 153, 153));
@@ -237,26 +236,22 @@ PreparedStatement Insertar=null;
                 txtIDActionPerformed(evt);
             }
         });
-        jPanel1.add(txtID, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 430, 310, 30));
+        jPanel1.add(txtID, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 420, 310, 30));
 
         jButton1.setBackground(new java.awt.Color(87, 222, 192));
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("REGISTRAR");
-        jButton1.setBorder(null);
+        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 490, 150, 50));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 480, 150, 50));
 
-        jLabel1.setBackground(new java.awt.Color(73, 192, 165));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/Registro.png"))); // NOI18N
-        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 610, 600));
-
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 600));
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
@@ -297,7 +292,6 @@ PreparedStatement Insertar=null;
     private javax.swing.JButton jButton1;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;

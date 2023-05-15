@@ -31,9 +31,21 @@ Statement MostrarDatos=null;
         Modelo.addColumn("Nombre");
         Modelo.addColumn("Apellido");
         Modelo.addColumn("DPI");
+        Modelo.addColumn("idPago");
+        Modelo.addColumn("Pago");
+        Modelo.addColumn("Menbresia");
+        Modelo.addColumn("idTipoPago");
+        Modelo.addColumn("IdIngresos");
+        Modelo.addColumn("idClientes");
+        Modelo.addColumn("idPago");
+        Modelo.addColumn("FechaIngreso");
+        Modelo.addColumn("idTipoPago");
+        Modelo.addColumn("TipoPago");
+      
         jTableDatos.setModel(Modelo);
-        String Mostrar="select *from Clientes";
-        String Datos[]=new String[4];
+        String Mostrar="select *from Clientes c, Pago p, Ingresos i, TipoPago tp\n" +
+"where c.idClientes=i.idClientes and i.idPago=p.idPago and p.idTipoPago=tp.idTipoPago";
+        String Datos[]=new String[14];
         Statement st;
         try {
             st=ConectarBD.createStatement();
@@ -43,6 +55,16 @@ Statement MostrarDatos=null;
                 Datos[1]=rs.getString(2);
                 Datos[2]=rs.getString(3);
                 Datos[3]=rs.getString(4);
+                Datos[4]=rs.getString(5);
+                Datos[5]=rs.getString(6);
+                Datos[6]=rs.getString(7);
+                Datos[7]=rs.getString(8);
+                Datos[8]=rs.getString(9);
+                Datos[9]=rs.getString(10);
+                Datos[10]=rs.getString(11);
+                Datos[11]=rs.getString(12);
+                Datos[12]=rs.getString(13);
+                Datos[13]=rs.getString(14);
                 Modelo.addRow(Datos);
                
             }
@@ -101,7 +123,7 @@ Statement MostrarDatos=null;
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 599, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 909, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addComponent(jButton1)
@@ -114,7 +136,7 @@ Statement MostrarDatos=null;
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 443, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

@@ -152,11 +152,12 @@ public class Eliminar extends javax.swing.JPanel {
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
+        if (JOptionPane.showConfirmDialog(null,"Elimino Ingresos","Salir",JOptionPane.YES_NO_CANCEL_OPTION)==0){
           EliminarIngresos();
         EliminarClintes();
         EliminarPago();
         EliminarTipoPago();
-        
+        } 
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void txtIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIDActionPerformed
@@ -209,62 +210,63 @@ Modelo.addColumn("idClientes");
     
 }
 public void EliminarClintes(){
-        if(JOptionPane.showConfirmDialog(null, "Esta seguro de Eliminar al Cliente","Salir",JOptionPane.YES_NO_CANCEL_OPTION)==0);
-        {
+        
             try {
                 Eliminar=ConectarBD.prepareStatement("Delete from Clientes where idClientes='"+txtID.getText()+"'");
                 int indice=Eliminar.executeUpdate();
                 if(indice>0){
                     MostrarDatos();
                 }else{
-                    JOptionPane.showMessageDialog(null, "No selecciona la fina");
+                    JOptionPane.showMessageDialog(null, "No selecciona la fina 1");
                 }
             } catch (Exception e) {
              JOptionPane.showMessageDialog(null, "ERROR"+e.toString());
             }
-        }
+        
 }
 public void EliminarPago(){
-    if(JOptionPane.showConfirmDialog(null, "ELIMINO PAGO","SALIR",JOptionPane.YES_NO_CANCEL_OPTION)==0);
-    {
+    
         try {
-            Eliminar=ConectarBD.prepareStatement("DELETE FROM Pago where idTipoPago='"+txtID.getText()+"'");
+            Eliminar=ConectarBD.prepareStatement("DELETE FROM Pago where idPago='"+txtID.getText()+"'");
             int indice=Eliminar.executeUpdate();
             if(indice>0){
                 MostrarDatos();
+            }else{
+                
+            
+            JOptionPane.showMessageDialog(null, "Seleccione la fila 2");
             }
-            JOptionPane.showMessageDialog(null, "Seleccione la fila");
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Error"+e.toString());
         }
-    }
+    
     
 }
 public void EliminarTipoPago(){
-    if(JOptionPane.showConfirmDialog(null,"ELIMINO TIPOPAGO","SALIR",JOptionPane.YES_NO_CANCEL_OPTION)==0);{
+    
     try {
         Eliminar=ConectarBD.prepareStatement("DELETE FROM TipoPago where idTipoPago='"+txtID.getText()+"'");
         int indice=Eliminar.executeUpdate();
         if(indice>0){
             MostrarDatos();
         }else{
-            JOptionPane.showMessageDialog(null, "Seleccione la fila");
+            JOptionPane.showMessageDialog(null, "Seleccione la fila 3");
         }
     } catch (Exception e) {
         JOptionPane.showMessageDialog(null, "Error"+e.toString());
     }
-}
+
     
 }
 public void EliminarIngresos(){
-    if (JOptionPane.showConfirmDialog(null,"Elimino Ingresos","Salir",JOptionPane.YES_NO_CANCEL_OPTION)==0); {
+     
         try {
         Eliminar=ConectarBD.prepareStatement("DELETE FROM Ingresos where idClientes='"+txtID.getText()+"'");
         int indice=Eliminar.executeUpdate();
         if(indice>0){
             MostrarDatos();
         }else{
-            JOptionPane.showMessageDialog(null,"Seleccione la fila ");
+            JOptionPane.showMessageDialog(null,"Seleccione la fila 4 ");
             
         }
         
@@ -272,7 +274,7 @@ public void EliminarIngresos(){
     {
         
         JOptionPane.showMessageDialog(null, "Error"+e.toString());
-    }
+    
     
 }
 }

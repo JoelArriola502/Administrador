@@ -59,7 +59,7 @@ public class Administrador extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 158, 162, 80));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 162, 80));
 
         jButton2.setBackground(new java.awt.Color(87, 222, 192));
         jButton2.setFont(new java.awt.Font("Roboto", 0, 24)); // NOI18N
@@ -72,7 +72,7 @@ public class Administrador extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 267, 162, 80));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, 162, 80));
 
         jButton3.setBackground(new java.awt.Color(87, 222, 192));
         jButton3.setFont(new java.awt.Font("Roboto", 0, 24)); // NOI18N
@@ -108,7 +108,7 @@ public class Administrador extends javax.swing.JFrame {
                 jButtonEliminarActionPerformed(evt);
             }
         });
-        jPanel1.add(jButtonEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 160, 70));
+        jPanel1.add(jButtonEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 160, 70));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 180, 570));
 

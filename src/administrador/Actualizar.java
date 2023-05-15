@@ -149,26 +149,18 @@ public void Limpiar(){
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        txtNombre = new javax.swing.JTextField();
-        jSeparator1 = new javax.swing.JSeparator();
-        txtApellido = new javax.swing.JTextField();
-        jSeparator2 = new javax.swing.JSeparator();
-        txtDPI = new javax.swing.JTextField();
-        jSeparator3 = new javax.swing.JSeparator();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jSeparator7 = new javax.swing.JSeparator();
-        txtPago = new javax.swing.JTextField();
-        jSeparator4 = new javax.swing.JSeparator();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jSeparator5 = new javax.swing.JSeparator();
-        txtFecha = new javax.swing.JTextField();
-        jSeparator6 = new javax.swing.JSeparator();
-        txtID = new javax.swing.JTextField();
-        jSeparator8 = new javax.swing.JSeparator();
         jButton1 = new javax.swing.JButton();
+        jButtonMostrar = new javax.swing.JButton();
+        txtNombre = new javax.swing.JTextField();
+        txtApellido = new javax.swing.JTextField();
+        txtDPI = new javax.swing.JTextField();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        txtPago = new javax.swing.JTextField();
+        jComboBox2 = new javax.swing.JComboBox<>();
+        txtFecha = new javax.swing.JTextField();
+        txtID = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTableDatos = new javax.swing.JTable();
-        jButtonMostrar = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -182,86 +174,7 @@ public void Limpiar(){
         );
 
         jPanel2.setBackground(new java.awt.Color(87, 222, 192));
-
-        txtNombre.setBackground(new java.awt.Color(87, 222, 192));
-        txtNombre.setForeground(new java.awt.Color(153, 153, 153));
-        txtNombre.setText("Nombre");
-        txtNombre.setBorder(null);
-        txtNombre.setCaretColor(new java.awt.Color(51, 255, 204));
-        txtNombre.setSelectionColor(new java.awt.Color(51, 255, 204));
-        txtNombre.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNombreActionPerformed(evt);
-            }
-        });
-
-        txtApellido.setBackground(new java.awt.Color(87, 222, 192));
-        txtApellido.setForeground(new java.awt.Color(153, 153, 153));
-        txtApellido.setText("Apellido");
-        txtApellido.setBorder(null);
-        txtApellido.setCaretColor(new java.awt.Color(51, 255, 204));
-        txtApellido.setSelectionColor(new java.awt.Color(51, 255, 204));
-        txtApellido.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtApellidoActionPerformed(evt);
-            }
-        });
-
-        txtDPI.setBackground(new java.awt.Color(87, 222, 192));
-        txtDPI.setForeground(new java.awt.Color(153, 153, 153));
-        txtDPI.setText("DPI");
-        txtDPI.setBorder(null);
-        txtDPI.setCaretColor(new java.awt.Color(51, 255, 204));
-        txtDPI.setSelectionColor(new java.awt.Color(51, 255, 204));
-        txtDPI.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtDPIActionPerformed(evt);
-            }
-        });
-
-        jComboBox1.setBackground(new java.awt.Color(87, 222, 192));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tipo Pago", "Efectivo", "Targeta Credito", " " }));
-        jComboBox1.setBorder(null);
-
-        txtPago.setBackground(new java.awt.Color(87, 222, 192));
-        txtPago.setForeground(new java.awt.Color(153, 153, 153));
-        txtPago.setText("Pago");
-        txtPago.setBorder(null);
-        txtPago.setCaretColor(new java.awt.Color(51, 255, 204));
-        txtPago.setSelectionColor(new java.awt.Color(51, 255, 204));
-        txtPago.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtPagoActionPerformed(evt);
-            }
-        });
-
-        jComboBox2.setBackground(new java.awt.Color(87, 222, 192));
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Menbresía", "PREMIUN", "VIP", " " }));
-        jComboBox2.setBorder(null);
-
-        txtFecha.setBackground(new java.awt.Color(87, 222, 192));
-        txtFecha.setForeground(new java.awt.Color(153, 153, 153));
-        txtFecha.setText("Fecha Ingreso");
-        txtFecha.setBorder(null);
-        txtFecha.setCaretColor(new java.awt.Color(51, 255, 204));
-        txtFecha.setSelectionColor(new java.awt.Color(51, 255, 204));
-        txtFecha.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtFechaActionPerformed(evt);
-            }
-        });
-
-        txtID.setBackground(new java.awt.Color(87, 222, 192));
-        txtID.setForeground(new java.awt.Color(153, 153, 153));
-        txtID.setText("ID CLIENTE");
-        txtID.setBorder(null);
-        txtID.setCaretColor(new java.awt.Color(51, 255, 204));
-        txtID.setSelectionColor(new java.awt.Color(51, 255, 204));
-        txtID.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtIDActionPerformed(evt);
-            }
-        });
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setBackground(new java.awt.Color(87, 222, 192));
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -274,6 +187,125 @@ public void Limpiar(){
                 jButton1ActionPerformed(evt);
             }
         });
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 190, 150, 50));
+
+        jButtonMostrar.setBackground(new java.awt.Color(87, 222, 192));
+        jButtonMostrar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jButtonMostrar.setForeground(new java.awt.Color(0, 0, 0));
+        jButtonMostrar.setText("MOSTRAR");
+        jButtonMostrar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButtonMostrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButtonMostrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMostrarActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButtonMostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 190, 150, 50));
+
+        txtNombre.setBackground(new java.awt.Color(87, 222, 192));
+        txtNombre.setForeground(new java.awt.Color(51, 51, 51));
+        txtNombre.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "NOMBRE", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        txtNombre.setCaretColor(new java.awt.Color(51, 255, 204));
+        txtNombre.setPreferredSize(new java.awt.Dimension(64, 40));
+        txtNombre.setSelectionColor(new java.awt.Color(51, 255, 204));
+        txtNombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNombreActionPerformed(evt);
+            }
+        });
+        jPanel2.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 220, 60));
+
+        txtApellido.setBackground(new java.awt.Color(87, 222, 192));
+        txtApellido.setForeground(new java.awt.Color(51, 51, 51));
+        txtApellido.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "APELLIDO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        txtApellido.setCaretColor(new java.awt.Color(51, 255, 204));
+        txtApellido.setSelectionColor(new java.awt.Color(51, 255, 204));
+        txtApellido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtApellidoActionPerformed(evt);
+            }
+        });
+        jPanel2.add(txtApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 70, 220, 60));
+
+        txtDPI.setBackground(new java.awt.Color(87, 222, 192));
+        txtDPI.setForeground(new java.awt.Color(51, 51, 51));
+        txtDPI.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "DPI", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        txtDPI.setCaretColor(new java.awt.Color(51, 255, 204));
+        txtDPI.setSelectionColor(new java.awt.Color(51, 255, 204));
+        txtDPI.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtDPIActionPerformed(evt);
+            }
+        });
+        jPanel2.add(txtDPI, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 130, 220, 60));
+
+        jComboBox1.setBackground(new java.awt.Color(87, 222, 192));
+        jComboBox1.setForeground(new java.awt.Color(51, 51, 51));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione Pago", "Efectivo", "Targeta Credito", " " }));
+        jComboBox1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "TIPO PAGO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 220, 70));
+
+        txtPago.setBackground(new java.awt.Color(87, 222, 192));
+        txtPago.setForeground(new java.awt.Color(51, 51, 51));
+        txtPago.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "PAGO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        txtPago.setCaretColor(new java.awt.Color(51, 255, 204));
+        txtPago.setSelectionColor(new java.awt.Color(51, 255, 204));
+        txtPago.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPagoActionPerformed(evt);
+            }
+        });
+        txtPago.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtPagoKeyTyped(evt);
+            }
+        });
+        jPanel2.add(txtPago, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 80, 220, 60));
+
+        jComboBox2.setBackground(new java.awt.Color(87, 222, 192));
+        jComboBox2.setForeground(new java.awt.Color(51, 51, 51));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione la Menbresía", "PREMIUN", "VIP", " " }));
+        jComboBox2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "MENBRESÍA", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox2ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 200, 220, 70));
+
+        txtFecha.setBackground(new java.awt.Color(87, 222, 192));
+        txtFecha.setForeground(new java.awt.Color(51, 51, 51));
+        txtFecha.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "INGRESE FECHA", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        txtFecha.setCaretColor(new java.awt.Color(51, 255, 204));
+        txtFecha.setSelectionColor(new java.awt.Color(51, 255, 204));
+        txtFecha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtFechaActionPerformed(evt);
+            }
+        });
+        jPanel2.add(txtFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 140, 220, 60));
+
+        txtID.setBackground(new java.awt.Color(87, 222, 192));
+        txtID.setForeground(new java.awt.Color(51, 51, 51));
+        txtID.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "ID CLIENTE", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        txtID.setCaretColor(new java.awt.Color(51, 255, 204));
+        txtID.setSelectionColor(new java.awt.Color(51, 255, 204));
+        txtID.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtIDActionPerformed(evt);
+            }
+        });
+        txtID.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtIDKeyTyped(evt);
+            }
+        });
+        jPanel2.add(txtID, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 10, 220, 60));
 
         jTableDatos.setBackground(new java.awt.Color(87, 222, 192));
         jTableDatos.setModel(new javax.swing.table.DefaultTableModel(
@@ -294,103 +326,7 @@ public void Limpiar(){
         });
         jScrollPane1.setViewportView(jTableDatos);
 
-        jButtonMostrar.setBackground(new java.awt.Color(87, 222, 192));
-        jButtonMostrar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButtonMostrar.setForeground(new java.awt.Color(0, 0, 0));
-        jButtonMostrar.setText("MOSTRAR");
-        jButtonMostrar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButtonMostrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButtonMostrar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonMostrarActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(181, 181, 181)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(txtApellido, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(txtNombre, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jSeparator3, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(txtDPI, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jSeparator2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jSeparator7, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.Alignment.LEADING, 0, 159, Short.MAX_VALUE)))
-                .addGap(44, 44, 44)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jSeparator8, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtID, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSeparator6, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtFecha, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSeparator5, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jSeparator4, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtPago, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 162, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonMostrar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(65, 65, 65))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1)
-                .addContainerGap())
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(txtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 4, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtDPI, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(jSeparator7, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(txtPago, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(txtFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jButtonMostrar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(20, 20, 20)))
-                        .addGap(0, 0, 0)
-                        .addComponent(jSeparator8, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 377, Short.MAX_VALUE))
-        );
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 279, 908, 320));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -405,31 +341,6 @@ public void Limpiar(){
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
-        // TODO add your handling code here:
-
-    }//GEN-LAST:event_txtNombreActionPerformed
-
-    private void txtApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtApellidoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtApellidoActionPerformed
-
-    private void txtDPIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDPIActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtDPIActionPerformed
-
-    private void txtPagoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPagoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtPagoActionPerformed
-
-    private void txtFechaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFechaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtFechaActionPerformed
-
-    private void txtIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIDActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtIDActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
@@ -464,6 +375,52 @@ public void Limpiar(){
         
     }//GEN-LAST:event_jTableDatosMouseClicked
 
+    private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_txtNombreActionPerformed
+
+    private void txtApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtApellidoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtApellidoActionPerformed
+
+    private void txtDPIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDPIActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDPIActionPerformed
+
+    private void txtPagoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPagoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPagoActionPerformed
+
+    private void txtPagoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPagoKeyTyped
+        // TODO add your handling code here:
+        //solo acepta numeros
+        char Validar =evt.getKeyChar();
+        if(Validar<'0'||Validar>'9') evt.consume();
+    }//GEN-LAST:event_txtPagoKeyTyped
+
+    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox2ActionPerformed
+
+    private void txtFechaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFechaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtFechaActionPerformed
+
+    private void txtIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIDActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtIDActionPerformed
+
+    private void txtIDKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtIDKeyTyped
+        // TODO add your handling code here:
+        char Validar=evt.getKeyChar();
+        if(Validar<'0'||Validar>'9') evt.consume();
+    }//GEN-LAST:event_txtIDKeyTyped
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
@@ -473,14 +430,6 @@ public void Limpiar(){
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JSeparator jSeparator3;
-    private javax.swing.JSeparator jSeparator4;
-    private javax.swing.JSeparator jSeparator5;
-    private javax.swing.JSeparator jSeparator6;
-    private javax.swing.JSeparator jSeparator7;
-    private javax.swing.JSeparator jSeparator8;
     private javax.swing.JTable jTableDatos;
     private javax.swing.JTextField txtApellido;
     private javax.swing.JTextField txtDPI;

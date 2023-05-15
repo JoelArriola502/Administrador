@@ -50,7 +50,7 @@ public class Administrador extends javax.swing.JFrame {
 
         jButton1.setBackground(new java.awt.Color(87, 222, 192));
         jButton1.setFont(new java.awt.Font("Roboto", 0, 24)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setForeground(new java.awt.Color(51, 51, 51));
         jButton1.setText("REGISTRAR");
         jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -63,7 +63,7 @@ public class Administrador extends javax.swing.JFrame {
 
         jButton2.setBackground(new java.awt.Color(87, 222, 192));
         jButton2.setFont(new java.awt.Font("Roboto", 0, 24)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setForeground(new java.awt.Color(51, 51, 51));
         jButton2.setText("CONSULTAR");
         jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -76,7 +76,7 @@ public class Administrador extends javax.swing.JFrame {
 
         jButton3.setBackground(new java.awt.Color(87, 222, 192));
         jButton3.setFont(new java.awt.Font("Roboto", 0, 24)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jButton3.setForeground(new java.awt.Color(51, 51, 51));
         jButton3.setText("ACTUALIZAR");
         jButton3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -99,7 +99,7 @@ public class Administrador extends javax.swing.JFrame {
 
         jButtonEliminar.setBackground(new java.awt.Color(87, 222, 192));
         jButtonEliminar.setFont(new java.awt.Font("Roboto", 0, 24)); // NOI18N
-        jButtonEliminar.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonEliminar.setForeground(new java.awt.Color(51, 51, 51));
         jButtonEliminar.setText("ELIMINAR");
         jButtonEliminar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButtonEliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));

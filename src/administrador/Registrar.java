@@ -40,7 +40,7 @@ PreparedStatement Insertar=null;
             Insertar.setString(2, txtApellido.getText());
             Insertar.setString(3, txtDPI.getText());
             Insertar.executeUpdate();
-            JOptionPane.showMessageDialog(null, "Datos Agregados Correctamente ");
+            //JOptionPane.showMessageDialog(null, "Datos Agregados Correctamente ");
            // Limpiar();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Datos no  Agregados Correctamente "+e.toString());
@@ -53,7 +53,7 @@ PreparedStatement Insertar=null;
             Insertar=ConectarDB.prepareCall(Insert);
             Insertar.setString(1,TipoPago);
             Insertar.executeUpdate();
-            JOptionPane.showMessageDialog(null, "Datos Agregados Correctamente ");
+           // JOptionPane.showMessageDialog(null, "Datos Agregados Correctamente ");
            // Limpiar();
         } catch (Exception e) {
               JOptionPane.showMessageDialog(null, "Datos no  Agregados Correctamente "+e.toString());
@@ -72,7 +72,7 @@ PreparedStatement Insertar=null;
             Insertar.setString(2, menbresia);
             Insertar.setString(3, txtID.getText());
             Insertar.executeUpdate();
-            JOptionPane.showMessageDialog(null, "Datos agregados Correctamente a Pago");
+            //JOptionPane.showMessageDialog(null, "Datos agregados Correctamente a Pago");
            // Limpiar();
         } catch (Exception e) {
                JOptionPane.showMessageDialog(null, "Datos no  Agregados Correctamente "+e.toString());
@@ -89,8 +89,8 @@ PreparedStatement Insertar=null;
             Insertar.setString(2, txtID.getText());
             Insertar.setString(3, txtFecha.getText());
             Insertar.executeUpdate();
-            JOptionPane.showMessageDialog(null, "Datos Agregados Correctamente a Ingresos");
-           // Limpiar();
+            JOptionPane.showMessageDialog(null, "CLIENTE INSERTADO CORRECTAMENTE");
+            Limpiar();
         } catch (Exception e) {
              JOptionPane.showMessageDialog(null, "Datos no  Agregados Correctamente "+e.toString());
         }
@@ -126,21 +126,13 @@ public void Limpiar(){
 
         jPanel1 = new javax.swing.JPanel();
         txtNombre = new javax.swing.JTextField();
-        jSeparator1 = new javax.swing.JSeparator();
-        jSeparator2 = new javax.swing.JSeparator();
         txtApellido = new javax.swing.JTextField();
         txtDPI = new javax.swing.JTextField();
-        jSeparator3 = new javax.swing.JSeparator();
-        jSeparator4 = new javax.swing.JSeparator();
         txtPago = new javax.swing.JTextField();
-        jSeparator5 = new javax.swing.JSeparator();
         jComboBox1 = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
         txtFecha = new javax.swing.JTextField();
-        jSeparator6 = new javax.swing.JSeparator();
-        jSeparator7 = new javax.swing.JSeparator();
         jComboBox2 = new javax.swing.JComboBox<>();
-        jSeparator8 = new javax.swing.JSeparator();
         txtID = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
 
@@ -151,9 +143,8 @@ public void Limpiar(){
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtNombre.setBackground(new java.awt.Color(87, 222, 192));
-        txtNombre.setForeground(new java.awt.Color(153, 153, 153));
-        txtNombre.setText("Nombre");
-        txtNombre.setBorder(null);
+        txtNombre.setForeground(new java.awt.Color(51, 51, 51));
+        txtNombre.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "NOMBRE", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
         txtNombre.setCaretColor(new java.awt.Color(51, 255, 204));
         txtNombre.setSelectionColor(new java.awt.Color(51, 255, 204));
         txtNombre.addActionListener(new java.awt.event.ActionListener() {
@@ -161,14 +152,11 @@ public void Limpiar(){
                 txtNombreActionPerformed(evt);
             }
         });
-        jPanel1.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 130, 310, 30));
-        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 160, 310, 10));
-        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 210, 310, 10));
+        jPanel1.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 40, 310, 60));
 
         txtApellido.setBackground(new java.awt.Color(87, 222, 192));
-        txtApellido.setForeground(new java.awt.Color(153, 153, 153));
-        txtApellido.setText("Apellido");
-        txtApellido.setBorder(null);
+        txtApellido.setForeground(new java.awt.Color(51, 51, 51));
+        txtApellido.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "APELLIDO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
         txtApellido.setCaretColor(new java.awt.Color(51, 255, 204));
         txtApellido.setSelectionColor(new java.awt.Color(51, 255, 204));
         txtApellido.addActionListener(new java.awt.event.ActionListener() {
@@ -176,12 +164,11 @@ public void Limpiar(){
                 txtApellidoActionPerformed(evt);
             }
         });
-        jPanel1.add(txtApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 180, 310, 30));
+        jPanel1.add(txtApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 110, 310, 60));
 
         txtDPI.setBackground(new java.awt.Color(87, 222, 192));
-        txtDPI.setForeground(new java.awt.Color(153, 153, 153));
-        txtDPI.setText("DPI");
-        txtDPI.setBorder(null);
+        txtDPI.setForeground(new java.awt.Color(51, 51, 51));
+        txtDPI.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "DPI", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
         txtDPI.setCaretColor(new java.awt.Color(51, 255, 204));
         txtDPI.setSelectionColor(new java.awt.Color(51, 255, 204));
         txtDPI.addActionListener(new java.awt.event.ActionListener() {
@@ -189,14 +176,11 @@ public void Limpiar(){
                 txtDPIActionPerformed(evt);
             }
         });
-        jPanel1.add(txtDPI, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 220, 310, 30));
-        jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 250, 310, 10));
-        jPanel1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 330, 310, 10));
+        jPanel1.add(txtDPI, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, 310, 60));
 
         txtPago.setBackground(new java.awt.Color(87, 222, 192));
-        txtPago.setForeground(new java.awt.Color(153, 153, 153));
-        txtPago.setText("Pago");
-        txtPago.setBorder(null);
+        txtPago.setForeground(new java.awt.Color(51, 51, 51));
+        txtPago.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "PAGO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
         txtPago.setCaretColor(new java.awt.Color(51, 255, 204));
         txtPago.setSelectionColor(new java.awt.Color(51, 255, 204));
         txtPago.addActionListener(new java.awt.event.ActionListener() {
@@ -204,23 +188,27 @@ public void Limpiar(){
                 txtPagoActionPerformed(evt);
             }
         });
-        jPanel1.add(txtPago, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 300, 310, 30));
-        jPanel1.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 370, 310, 10));
+        txtPago.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtPagoKeyTyped(evt);
+            }
+        });
+        jPanel1.add(txtPago, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 310, 310, 60));
 
         jComboBox1.setBackground(new java.awt.Color(87, 222, 192));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tipo Pago", "Efectivo", "Targeta Credito", " " }));
-        jComboBox1.setBorder(null);
-        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 260, 310, 30));
+        jComboBox1.setForeground(new java.awt.Color(51, 51, 51));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione Pago", "Efectivo", "Targeta Credito", " " }));
+        jComboBox1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "TIPO PAGO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 240, 310, 70));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("INGRESE SUS DATOS ");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 70, 250, 40));
+        jLabel3.setText("INGRESE  DATOS DEL CLIENTE ");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 0, 370, 40));
 
         txtFecha.setBackground(new java.awt.Color(87, 222, 192));
-        txtFecha.setForeground(new java.awt.Color(153, 153, 153));
-        txtFecha.setText("Fecha Ingreso");
-        txtFecha.setBorder(null);
+        txtFecha.setForeground(new java.awt.Color(51, 51, 51));
+        txtFecha.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "INGRESE FECHA", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
         txtFecha.setCaretColor(new java.awt.Color(51, 255, 204));
         txtFecha.setSelectionColor(new java.awt.Color(51, 255, 204));
         txtFecha.addActionListener(new java.awt.event.ActionListener() {
@@ -228,20 +216,22 @@ public void Limpiar(){
                 txtFechaActionPerformed(evt);
             }
         });
-        jPanel1.add(txtFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 380, 310, 30));
-        jPanel1.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 410, 310, 10));
-        jPanel1.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 290, 310, 10));
+        jPanel1.add(txtFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 450, 310, 60));
 
         jComboBox2.setBackground(new java.awt.Color(87, 222, 192));
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Menbresía", "PREMIUN", "VIP", " " }));
-        jComboBox2.setBorder(null);
-        jPanel1.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 340, 310, 30));
-        jPanel1.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 450, 310, 10));
+        jComboBox2.setForeground(new java.awt.Color(51, 51, 51));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione la Menbresía", "PREMIUN", "VIP", " " }));
+        jComboBox2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "MENBRESÍA", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 370, 310, 70));
 
         txtID.setBackground(new java.awt.Color(87, 222, 192));
-        txtID.setForeground(new java.awt.Color(153, 153, 153));
-        txtID.setText("ID CLIENTE");
-        txtID.setBorder(null);
+        txtID.setForeground(new java.awt.Color(51, 51, 51));
+        txtID.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "ID CLIENTE", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
         txtID.setCaretColor(new java.awt.Color(51, 255, 204));
         txtID.setSelectionColor(new java.awt.Color(51, 255, 204));
         txtID.addActionListener(new java.awt.event.ActionListener() {
@@ -249,7 +239,12 @@ public void Limpiar(){
                 txtIDActionPerformed(evt);
             }
         });
-        jPanel1.add(txtID, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 420, 310, 30));
+        txtID.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtIDKeyTyped(evt);
+            }
+        });
+        jPanel1.add(txtID, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 510, 310, 60));
 
         jButton1.setBackground(new java.awt.Color(87, 222, 192));
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -262,7 +257,7 @@ public void Limpiar(){
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 480, 150, 50));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 490, 150, 50));
 
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 600));
     }// </editor-fold>//GEN-END:initComponents
@@ -300,6 +295,23 @@ public void Limpiar(){
         Ingreso();
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void txtIDKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtIDKeyTyped
+        // TODO add your handling code here:
+        char Validar=evt.getKeyChar();
+        if(Validar<'0'||Validar>'9') evt.consume();
+    }//GEN-LAST:event_txtIDKeyTyped
+
+    private void txtPagoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPagoKeyTyped
+        // TODO add your handling code here:
+        //solo acepta numeros 
+        char Validar =evt.getKeyChar();
+          if(Validar<'0'||Validar>'9') evt.consume();
+    }//GEN-LAST:event_txtPagoKeyTyped
+
+    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox2ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
@@ -307,14 +319,6 @@ public void Limpiar(){
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JSeparator jSeparator3;
-    private javax.swing.JSeparator jSeparator4;
-    private javax.swing.JSeparator jSeparator5;
-    private javax.swing.JSeparator jSeparator6;
-    private javax.swing.JSeparator jSeparator7;
-    private javax.swing.JSeparator jSeparator8;
     private javax.swing.JTextField txtApellido;
     private javax.swing.JTextField txtDPI;
     private javax.swing.JTextField txtFecha;

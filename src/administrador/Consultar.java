@@ -35,14 +35,13 @@ Statement MostrarDatos=null;
         Modelo.addColumn("TipoPago");
         Modelo.addColumn("Menbresia");
         Modelo.addColumn("FechaIngreso");
-     
-        
-      
+        Modelo.addColumn("TOTALCLIENTE");
         jTableDatos.setModel(Modelo);
-        String Mostrar="select c.idClientes, c.Nombre , c.Apellido, c.DPI, p.Pago,tp.TipoPago,p.Membresia,i.FechaIngreso\n" +
+        String Mostrar="select c.idClientes, c.Nombre , c.Apellido, c.DPI, p.Pago,tp.TipoPago,p.Membresia,i.FechaIngreso, sum(Pago)AS TOTALCLIENTE\n" +
 "from Clientes c, Pago p, Ingresos i, TipoPago tp\n" +
-"where c.idClientes=i.idClientes and i.idPago=p.idPago and p.idTipoPago=tp.idTipoPago";
-        String Datos[]=new String[8];
+"where c.idClientes=i.idClientes and i.idPago=p.idPago and p.idTipoPago=tp.idTipoPago\n" +
+"group by c.idClientes, c.Nombre , c.Apellido, c.DPI, p.Pago,tp.TipoPago,p.Membresia,i.FechaIngreso";
+        String Datos[]=new String[9];
         Statement st;
         try {
             st=ConectarBD.createStatement();
@@ -56,6 +55,7 @@ Statement MostrarDatos=null;
                 Datos[5]=rs.getString(6);
                 Datos[6]=rs.getString(7);
                 Datos[7]=rs.getString(8);
+                Datos[8]=rs.getString(9);
                 Modelo.addRow(Datos);
                
             }
@@ -65,7 +65,32 @@ Statement MostrarDatos=null;
         }
         
     }
-
+public void Total(){
+    DefaultTableModel Modelo=new DefaultTableModel();
+    Modelo.addColumn("TOTAL");
+    jTable1.setModel(Modelo);
+    String Total[]=new String[1];
+    String Mostra="select SUM(Pago) as TOTAL\n" +
+"from Pago";
+   Statement st;
+        try {
+            st=ConectarBD.createStatement();
+            ResultSet rs=st.executeQuery(Mostra);
+            while(rs.next()){
+                Total[0]=rs.getString(1);
+              
+                Modelo.addRow(Total);
+               
+            }
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro mostrar consulta"+e.toString());
+        }
+    
+    
+   
+            
+}
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -79,6 +104,8 @@ Statement MostrarDatos=null;
         jScrollPane1 = new javax.swing.JScrollPane();
         jTableDatos = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
 
         jPanel1.setBackground(new java.awt.Color(87, 222, 192));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "CONSULTA DE DATOS", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 18), new java.awt.Color(0, 0, 0))); // NOI18N
@@ -110,24 +137,43 @@ Statement MostrarDatos=null;
             }
         });
 
+        jTable1.setBackground(new java.awt.Color(87, 222, 192));
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {},
+                {},
+                {},
+                {}
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane2.setViewportView(jTable1);
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 909, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 770, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(5, 5, 5)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addComponent(jButton1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jButton1))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 443, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(13, 13, 13)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 443, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addComponent(jButton1))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -145,6 +191,7 @@ Statement MostrarDatos=null;
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         MostrarDatos();
+        Total();
     }//GEN-LAST:event_jButton1ActionPerformed
 
 
@@ -152,6 +199,8 @@ Statement MostrarDatos=null;
     private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jTable1;
     private javax.swing.JTable jTableDatos;
     // End of variables declaration//GEN-END:variables
 }

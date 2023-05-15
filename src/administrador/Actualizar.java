@@ -18,6 +18,7 @@ import java.sql.PreparedStatement;
 public class Actualizar extends javax.swing.JPanel {
 Conexion conectar=new Conexion();
 Connection ConectarBD=conectar.getConection();
+PreparedStatement actualizar=null;
 
 /**
      * Creates new form Actualizar
@@ -25,7 +26,7 @@ Connection ConectarBD=conectar.getConection();
     public Actualizar() {
         initComponents();
     }
-    /*
+   
      public void MostrarDatos(){
         DefaultTableModel Modelo=new DefaultTableModel();
         Modelo.addColumn("idClientes");
@@ -63,40 +64,11 @@ Connection ConectarBD=conectar.getConection();
         }
         
     }
-    */
-         public void MostrarDatos(){
-        DefaultTableModel Modelo=new DefaultTableModel();
-        Modelo.addColumn("idClientes");
-        Modelo.addColumn("Nombre");
-        Modelo.addColumn("Apellido");
-        Modelo.addColumn("DPI");
-        jTableDatos.setModel(Modelo);
-        String Mostrar="select *from Clientes ";
-        String Datos[]=new String[4];
-        Statement st;
-        try {
-            st=ConectarBD.createStatement();
-            ResultSet rs=st.executeQuery(Mostrar);
-            while(rs.next()){
-                Datos[0]=rs.getString(1);
-                Datos[1]=rs.getString(2);
-                Datos[2]=rs.getString(3);
-                Datos[3]=rs.getString(4);
-              
-           
-                Modelo.addRow(Datos);
-               
-            }
-            
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Erro mostrar consulta"+e.toString());
-        }
-        
-    }
+
      public void Clientes(){
          try {
-             PreparedStatement ps=ConectarBD.prepareStatement("update Clientes set Nombre='"+txtNombre.getText()+"',Apellido='"+txtApellido.getText()+"',DPI='"+txtDPI.getText()+"' where idClientes='"+txtID.getText()+"'");
-             int indice=ps.executeUpdate();
+              actualizar=ConectarBD.prepareStatement("update Clientes set Nombre='"+txtNombre.getText()+"',Apellido='"+txtApellido.getText()+"',DPI='"+txtDPI.getText()+"' where idClientes='"+txtID.getText()+"'");
+             int indice=actualizar.executeUpdate();
              if(indice>0){
                  JOptionPane.showMessageDialog(null, "DATOS ACTUALIZADOS CORRECTAMENTE");
                  MostrarDatos();
@@ -106,6 +78,51 @@ Connection ConectarBD=conectar.getConection();
              }
          } catch (Exception e) {
               JOptionPane.showMessageDialog(null, "ERROR AL ACTUALIZAR "+e.toString());
+         }
+     }
+     public void Pago(){
+         try {
+            actualizar=ConectarBD.prepareStatement("update Pago set Pago='"+txtPago.getText()+"',Membresia='"+jComboBox2.getSelectedItem()+"' where idPago='"+txtID.getText()+"'");
+        int indice=actualizar.executeUpdate();
+        if(indice>0){
+             JOptionPane.showMessageDialog(null, "DATOS ACTUALIZADOS CORRECTAMENTE pago");
+                 MostrarDatos();
+            
+        }else{
+                 JOptionPane.showMessageDialog(null, "No selecciono la fila");
+             }
+         } catch (Exception e) {
+             JOptionPane.showMessageDialog(null, "ERROR AL ACTUALIZAR "+e.toString());
+         }
+     }
+     public void TipoPago(){
+         try {
+            actualizar=ConectarBD.prepareStatement("update TipoPago set TipoPago='"+jComboBox1.getSelectedItem()+"' where idTipoPago='"+txtID.getText()+"'");
+        int indice=actualizar.executeUpdate();
+        if(indice>0){
+             JOptionPane.showMessageDialog(null, "DATOS ACTUALIZADOS CORRECTAMENTE Tipo Pago");
+                 MostrarDatos();
+            
+        }else{
+                 JOptionPane.showMessageDialog(null, "No selecciono la fila");
+             }
+         } catch (Exception e) {
+             JOptionPane.showMessageDialog(null, "ERROR AL ACTUALIZAR "+e.toString());
+         }
+     }
+      public void Ingresos(){
+         try {
+            actualizar=ConectarBD.prepareStatement("update Ingresos set FechaIngreso='"+txtFecha.getText()+"' where idIngresos='"+txtID.getText()+"'");
+        int indice=actualizar.executeUpdate();
+        if(indice>0){
+             JOptionPane.showMessageDialog(null, "DATOS ACTUALIZADOS CORRECTAMENTE INGRESOS");
+                 MostrarDatos();
+            
+        }else{
+                 JOptionPane.showMessageDialog(null, "No selecciono la fila");
+             }
+         } catch (Exception e) {
+             JOptionPane.showMessageDialog(null, "ERROR AL ACTUALIZAR "+e.toString());
          }
      }
 
@@ -405,6 +422,9 @@ Connection ConectarBD=conectar.getConection();
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         Clientes();
+        TipoPago();
+        Pago();
+        Ingresos();
       
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -420,10 +440,10 @@ Connection ConectarBD=conectar.getConection();
         this.txtNombre.setText(this.jTableDatos.getValueAt( fila,1).toString());
         this.txtApellido.setText(this.jTableDatos.getValueAt(fila,2).toString());
         this.txtDPI.setText(this.jTableDatos.getValueAt(fila, 3).toString());
-        //this.txtPago.setText(this.jTableDatos.getValueAt(fila,5).toString());
-        //this.jComboBox1.setSelectedItem(this.jTableDatos.getValueAt(fila,6).toString());
-        //this.jComboBox2.setSelectedItem(this.jTableDatos.getValueAt(fila,7).toString());
-        //this.txtFecha.setText(this.jTableDatos.getValueAt(fila, 8).toString());
+        this.txtPago.setText(this.jTableDatos.getValueAt(fila,4).toString());
+        this.jComboBox1.setSelectedItem(this.jTableDatos.getValueAt(fila,5).toString());
+        this.jComboBox2.setSelectedItem(this.jTableDatos.getValueAt(fila,6).toString());
+        this.txtFecha.setText(this.jTableDatos.getValueAt(fila, 7).toString());
         
         
     }//GEN-LAST:event_jTableDatosMouseClicked

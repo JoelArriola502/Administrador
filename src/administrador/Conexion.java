@@ -23,7 +23,7 @@ public class Conexion {
             Conectar=DriverManager.getConnection("jdbc:mysql://localhost:3306/Administrador","root","joelarriola");
            
             if(Conectar!=null){
-                JOptionPane.showMessageDialog(null,"CONEXION EXITOSA");
+               
             }
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null,"ERRO AL CONECTAR A LA BASE DE DATOS"+ e.toString());

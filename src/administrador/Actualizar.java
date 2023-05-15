@@ -70,7 +70,7 @@ PreparedStatement actualizar=null;
               actualizar=ConectarBD.prepareStatement("update Clientes set Nombre='"+txtNombre.getText()+"',Apellido='"+txtApellido.getText()+"',DPI='"+txtDPI.getText()+"' where idClientes='"+txtID.getText()+"'");
              int indice=actualizar.executeUpdate();
              if(indice>0){
-                 JOptionPane.showMessageDialog(null, "DATOS ACTUALIZADOS CORRECTAMENTE");
+                // JOptionPane.showMessageDialog(null, "DATOS ACTUALIZADOS CORRECTAMENTE");
                  MostrarDatos();
                  
              }else{
@@ -85,7 +85,7 @@ PreparedStatement actualizar=null;
             actualizar=ConectarBD.prepareStatement("update Pago set Pago='"+txtPago.getText()+"',Membresia='"+jComboBox2.getSelectedItem()+"' where idPago='"+txtID.getText()+"'");
         int indice=actualizar.executeUpdate();
         if(indice>0){
-             JOptionPane.showMessageDialog(null, "DATOS ACTUALIZADOS CORRECTAMENTE pago");
+            // JOptionPane.showMessageDialog(null, "DATOS ACTUALIZADOS CORRECTAMENTE pago");
                  MostrarDatos();
             
         }else{
@@ -100,7 +100,7 @@ PreparedStatement actualizar=null;
             actualizar=ConectarBD.prepareStatement("update TipoPago set TipoPago='"+jComboBox1.getSelectedItem()+"' where idTipoPago='"+txtID.getText()+"'");
         int indice=actualizar.executeUpdate();
         if(indice>0){
-             JOptionPane.showMessageDialog(null, "DATOS ACTUALIZADOS CORRECTAMENTE Tipo Pago");
+           //  JOptionPane.showMessageDialog(null, "DATOS ACTUALIZADOS CORRECTAMENTE Tipo Pago");
                  MostrarDatos();
             
         }else{
@@ -115,7 +115,7 @@ PreparedStatement actualizar=null;
             actualizar=ConectarBD.prepareStatement("update Ingresos set FechaIngreso='"+txtFecha.getText()+"' where idIngresos='"+txtID.getText()+"'");
         int indice=actualizar.executeUpdate();
         if(indice>0){
-             JOptionPane.showMessageDialog(null, "DATOS ACTUALIZADOS CORRECTAMENTE INGRESOS");
+            // JOptionPane.showMessageDialog(null, "DATOS ACTUALIZADOS CORRECTAMENTE INGRESOS");
                  MostrarDatos();
             
         }else{

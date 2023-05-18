@@ -14,6 +14,7 @@ import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import java.awt.BorderLayout;
+import javax.swing.JOptionPane;
 public class Administrador extends javax.swing.JFrame {
 
    Conexion conectar=new Conexion();
@@ -90,6 +91,11 @@ public class Administrador extends javax.swing.JFrame {
         jButton4.setBackground(new java.awt.Color(255, 0, 0));
         jButton4.setText("X");
         jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4MouseClicked(evt);
+            }
+        });
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -133,6 +139,7 @@ public class Administrador extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         Consultar();
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -147,13 +154,20 @@ public class Administrador extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        dispose();
+             if(JOptionPane.showConfirmDialog(null, "DESEA SALIR DEL PROGRAMA","SALIR",JOptionPane.YES_NO_CANCEL_OPTION)==0){
+       dispose();
+        }
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButtonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEliminarActionPerformed
         // TODO add your handling code here:
         Eliminar();
     }//GEN-LAST:event_jButtonEliminarActionPerformed
+
+    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+        // TODO add your handling code here:
+     
+    }//GEN-LAST:event_jButton4MouseClicked
 
     /**
      * @param args the command line arguments
